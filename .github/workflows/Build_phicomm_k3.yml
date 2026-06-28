@@ -58,8 +58,8 @@ jobs:
         sed -i 's/\${Arch}/armv5/g' feeds/2305ipk/luci-app-adguardhome/root/usr/share/AdGuardHome/links.txt
         ## sed -i 's/\${Arch}/armv5/g' feeds/luci/applications/luci-app-adguardhome/root/usr/share/AdGuardHome/links.txt
         
-        sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='AE86Wrt-K3-$(date +%Y%m%d)'/g" package/lean/default-settings/files/zzz-default-settings  
-        sed -i "s/OPENWRT_RELEASE=\"*.*\"/OPENWRT_RELEASE=\"AE86Wrt-K3-$(date +%Y%m%d) By DaoDao\"/g" package/base-files/files/usr/lib/os-release
+        sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='K3Wrt-K3-$(date +%Y%m%d)'/g" package/lean/default-settings/files/zzz-default-settings  
+        sed -i "s/OPENWRT_RELEASE=\"*.*\"/OPENWRT_RELEASE=\"K3Wrt-K3-$(date +%Y%m%d) By DaoDao\"/g" package/base-files/files/usr/lib/os-release
         
     - name: Configuration Customization - Build_phicomm_k3
       env:
@@ -123,7 +123,7 @@ jobs:
       run: |
         time=$(date +%Y%m%d%H%M%S)
         release_tag="$time"
-        release_name="AE86Wrt-斐讯K3-5.4内核-$(date +%Y%m%d)"
+        release_name="K3Wrt-斐讯K3-5.4内核-$(date +%Y%m%d)"
         echo "release_name=$release_name" >> $GITHUB_OUTPUT
         echo "release_tag=$release_tag" >> $GITHUB_OUTPUT       
 
