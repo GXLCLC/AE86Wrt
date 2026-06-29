@@ -97,7 +97,7 @@ jobs:
         rom=openwrt/bin/targets/bcm53xx/generic/openwrt-bcm53xx-generic-phicomm_k3-squashfs.trx
         getmd5 $rom
                 
-        cp -a $rom ./ARM_Out/AE86Wrt-K3-5.4-$(date +%Y%m%d)_${md5}.trx
+        cp -a $rom ./ARM_Out/K3Wrt-K3-5.4-$(date +%Y%m%d)_${md5}.trx
 
                
     - name: Upload Firmwares
